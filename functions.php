@@ -25,7 +25,7 @@ if(!function_exists( 'b2w_theme_setup' )) {
         add_theme_support('customize-selective-refresh-widgets');
         add_theme_support('responsive-embeds');
 
-        // Nav menus
+        // Register primary nav menu
         register_nav_menus(
             array(
                 'primary' => esc_html__('Primary Menu', 'bootstrap2wordpress')
