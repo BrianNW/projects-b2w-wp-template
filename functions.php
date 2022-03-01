@@ -34,6 +34,7 @@ if(!function_exists( 'b2w_theme_setup' )) {
     }
 }
 
+
 add_action('after_setup_theme', 'b2w_theme_setup');
 
 
