@@ -100,14 +100,20 @@
             <!-- Subscribe bar section -->
             <section class="subscribe-bar">
                 <div class="container">
-                    <div class="row">
+                    <div class="row flex-vertical-center">
 
                         <!-- always be 6 columns each regardless of screen size -->
                         <div class="col-sm-6">
-                            <p><strong>Enter your email address to subscribe to our newsletter</strong></p>
+
+                            <!-- <p><strong>Enter your email address to subscribe to our newsletter</strong></p> -->
+
+                            <p><?php echo wp_kses_post( get_theme_mod( 'subscribe_text', "<p><strong>Enter your email address to subscribe to our newsletter</strong></p>" )); ?> </p>
+
                         </div>
                         <div class="col-sm-6">
-                            <form action="index.html" class="" method="post">
+
+
+                            <!-- <form action="index.html" class="" method="post">
                                 <div class="row">
                                     <div class="col-md-8">
                                         <input type="text">
@@ -116,7 +122,24 @@
                                         <button type="button" name="button" class="btn btn-invert">Subscribe</button>
                                     </div>
                                 </div>
-                            </form>
+                            </form> -->
+
+                            <?php
+
+                            $b2w_form_html = get_theme_mod( 'subscribe_form', '<form action="index.html" class="" method="post">
+                                <div class="row">
+                                    <div class="col-md-8">
+                                        <input type="text">
+                                    </div>
+                                    <div class="col-md-4">
+                                        <button type="button" name="button" class="btn btn-invert">Subscribe</button>
+                                    </div>
+                                </div>
+                            </form>');
+
+                            echo $b2w_form_html;
+                            ?>
+
                         </div>
                     </div>
                 </div>
